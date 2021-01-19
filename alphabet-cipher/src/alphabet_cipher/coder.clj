@@ -11,9 +11,7 @@
 
 (defn extended-keyword [keyword length]
   (if (< (count keyword) length)
-    (let [extended-keyword (range length)
-          initial-length (count keyword)]
-      (mapv #(nth keyword (mod % initial-length)) extended-keyword))
+    (take length (cycle keyword))
     (seq keyword)))
 
 (defn rotate-letter [op c1 c2]
