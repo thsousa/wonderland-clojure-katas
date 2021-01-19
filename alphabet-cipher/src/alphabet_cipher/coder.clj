@@ -31,8 +31,18 @@
 (defn decode [keyword message]
   (rotate-word keyword message -))
 
+(defn unrepeated-keyword [keyword length]
+  (let [all-substrings     (map #(subs keyword 0 %) (range 1 length))
+        all-ext-substrings (map #(hash-map % (reduce str (extended-keyword % length))) all-substrings)
+        patterns-map       (reduce conj all-ext-substrings)]
+    (->> patterns-map
+         (filter #(#{keyword} (val %)))
+         (keys)
+         (sort)
+         (first))))
+
 (defn decipher [cipher message]
-  (decode message cipher)
-  ; TODO: find the size of the pattern
-  )
+  (-> message
+      (decode cipher)
+      (unrepeated-keyword (count message))))
 
