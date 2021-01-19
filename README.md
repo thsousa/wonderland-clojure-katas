@@ -1,5 +1,15 @@
 # wonderland-clojure-katas
 
+TODO list:
+
+- [x] Alphabet cipher
+- [ ] Card game war
+- [ ] Doublets
+- [ ] Fox goose bag of corn
+- [ ] Magic square
+- [ ] Tiny maze
+- [ ] Wonderland number
+
 These are a collection of Clojure
 [katas](http://en.wikipedia.org/wiki/Kata_%28programming%29) inspired by
 [Lewis Carroll](http://en.wikipedia.org/wiki/Lewis_Carroll) and _Alice
