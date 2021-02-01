@@ -7,7 +7,7 @@ TODO list:
 - [ ] Doublets
 - [ ] Fox goose bag of corn
 - [ ] Magic square
-- [ ] Tiny maze
+- [x] Tiny maze
 - [ ] Wonderland number
 
 These are a collection of Clojure
